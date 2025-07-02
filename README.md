@@ -23,7 +23,7 @@ pm.test("Status code é 200", function () {
 pm.test("Mensagem de sucesso", function () {
     var jsonData = pm.response.json();
     pm.expect(jsonData.message).to.eql("Login realizado com sucesso!");
-});
+});```
 
 📊 Organização geral de evolução nos testes: 
 
