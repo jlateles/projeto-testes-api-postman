@@ -9,9 +9,9 @@
 - Scripts de Teste em JavaScript
 
 📝 Casos de Teste:
-POST /login → Login com dados válidos
-POST /register → Cadastro com dados válidos
-Validação de status 200 e mensagens de sucesso
+- POST /login → Login com dados válidos
+- POST /register → Cadastro com dados válidos
+- Validação de status 200 e mensagens de sucesso
 
 ## 🧪 Exemplos de Testes Automatizados
 
@@ -41,7 +41,7 @@ pm.test("Mensagem de sucesso", function () {
   - Match value/expression: /login 
   - Status code: 200
   - Response body: 
-        {
+     ```{
           "message": "Login realizado com sucesso!",
           "token": "abc123xyz",
           "user": {
@@ -59,7 +59,7 @@ pm.test("Mensagem de sucesso", function () {
 - Match value: `"senha": "errada"`
 - Status code: 401 Unauthorized
 - Response body: 
-    {
+   ```{
       "message": "Senha incorreta"
     }
 
@@ -72,7 +72,7 @@ pm.test("Mensagem de sucesso", function () {
   - Match value/expression: /register
   - Status code: 200
   - Response body:
-          {
+      ```{
             "message": "Usuário cadastrado com sucesso!",
             "user": {
             "id": 2,
