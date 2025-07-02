@@ -1,12 +1,15 @@
-# Projeto QA 
+# Projeto  testes API com Postman - QA 
 
 - Neste projeto, simulei um pequeno sistema de autenticação com endpoints de cadastro e login usando o Beeceptor. Com o Postman, criei requisições e testes automatizados para validar o comportamento da API, como status code, mensagens de retorno e dados esperados.
 
 📝 Ferramentas utilizadas:
-- [Postman](https://www.postman.com/)
-- [Beeceptor](https://app.beeceptor.com/)
-- JSON
-- Scripts de Teste em JavaScript
+| Ferramenta      | Função no projeto                          |
+| --------------- | ------------------------------------------------------------------------- |
+| [Beeceptor](https://app.beeceptor.com/)    | API simulada / mock que responde requisições   |
+| [Postman](https://www.postman.com/)        | Cliente para enviar requisições e rodar testes |
+| README + GitHub                            | Documentação e evidências do projeto de QA     |
+| JSON (body)                                | Dados enviados na requisição (simula o que o usuário digitou)
+| JavaScript                                 | Scripts para validar as respostas da API (aba Tests no Postman)
 
 📝 Casos de Teste:
 - POST /login → Login com dados válidos
