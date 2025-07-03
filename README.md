@@ -23,7 +23,7 @@
 | POST   | `/register` | Cadastro com **e-mail já existente**   | `409 Conflict`, mensagem:  `"E-mail já cadastrado"`         |
 | POST   | `/login`    | Envio de **dados incompletos (sem senha)** | `400 Bad Request`, mensagem: `"Senha é obrigatória"`        |
 | POST   | `/register  | Envio de **dados incompletos (sem e-mail)**| `400 Bad Request`, mensagem:`"E-mail é obrigatório"`        |
-| POST   | `/register  | Envio com **formato inválido** (e-mail errado) | `422 Unprocessable Entity` `"E-mail em formato inválido"` |
+| POST   | `/register  | Envio com **formato inválido** (e-mail errado) | `422 Unprocessable Entity`, mensagem: `"E-mail em formato inválido"` |
 
 
 ## 🧪 Exemplos de Testes Automatizados
