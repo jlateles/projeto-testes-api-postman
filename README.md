@@ -12,9 +12,15 @@
 | JavaScript                                 | Scripts para validar as respostas da API (aba Tests no Postman)
 
 📝 Casos de Teste:
-- POST /login → Login com dados válidos
-- POST /register → Cadastro com dados válidos
-- Validação de status 200 e mensagens de sucesso
+| Method | Endpoint    | Cenário                                | Validações esperadas                                        |
+| ------ | ----------- | -------------------------------------- | ----------------------------------------------------------- |
+| POST   | `/login`    | Login com dados válidos                | Status `200`, mensagem: `"Login realizado com sucesso!"`    |
+| POST   | `/login`    | Login com **senha incorreta**          | Status `401`, mensagem: `"Senha incorreta"`                 |
+| POST   | `/register` | Cadastro com dados válidos             | Status `201`, mensagem: `"Cadastro realizado com sucesso!"` |
+| POST   | `/register` | Cadastro com **e-mail já existente**   | Status `409`, mensagem: `"E-mail já cadastrado"`            |
+| POST   | `/login`    | Validação de **tempo de resposta**     | Resposta abaixo de `700ms`                                  |
+| POST   | `/login`    | Validação de **header** `Content-Type` | Header `"Content-Type"` contém `"application/json"`         |
+
 
 ## 🧪 Exemplos de Testes Automatizados
 
@@ -33,8 +39,8 @@ pm.test("Mensagem de sucesso", function () {
 
 | Nível | Tipo de Teste              | Exemplo                                              |
 | ----- | -------------------------- | ---------------------------------------------------- |
-| 1️⃣   | Positivo básico            | Login e Cadastro com dados válidos                   |
-| 2️⃣   | Negativo / erro de entrada | Login com senha errada, cadastro com email duplicado |
+| 1️⃣   | Positivo básico            | Login e Cadastro com dados válidos                       |
+| 2️⃣   | Negativo / erro de entrada | Login com senha errada, cadastro com email duplicado,etc |
 | 3️⃣   | Validações extras          | Performance, headers, tipos de dados, token          |
 
 ### Regra: Login realizado com sucesso: 
