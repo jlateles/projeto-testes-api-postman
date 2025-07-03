@@ -19,7 +19,11 @@
 | POST   | `/register` | Cadastro com dados válidos             | Status `201`, mensagem: `"Cadastro realizado com sucesso!"` |
 | POST   | `/register` | Cadastro com **e-mail já existente**   | Status `409`, mensagem: `"E-mail já cadastrado"`            |
 | POST   | `/login`    | Validação de **tempo de resposta**     | Resposta abaixo de `700ms`                                  |
-| POST   | `/login`    | Validação de **header** `Content-Type` | Header `"Content-Type"` contém `"application/json"`         |
+| POST   | `/login`    | Validação de **header** `Content-Type` | Header `"Content-Type"` contém `"application/json"`         |                            
+| POST   | `/register` | Cadastro com e-mail já existente       | `409 Conflict`, mensagem:  `"E-mail já cadastrado"`         |
+| POST   | `/login`    | Envio de dados incompletos (sem senha) | `400 Bad Request`, mensagem: `"Senha é obrigatória"`        |
+| POST   | `/register  | Envio de dados incompletos (sem e-mail)| `400 Bad Request`, mensagem:`"E-mail é obrigatório"`        |
+| POST   | `/register  | Envio com formato inválido (e-mail errado) | `422 Unprocessable Entity` `"E-mail em formato inválido"` |
 
 
 ## 🧪 Exemplos de Testes Automatizados
