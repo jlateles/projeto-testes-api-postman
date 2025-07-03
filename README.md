@@ -1,4 +1,4 @@
-# Projeto  testes API com Postman - QA 
+# Mini projeto de testes API com Postman - QA 
 
 - Neste projeto, simulei um pequeno sistema de autenticação com endpoints de cadastro e login usando o Beeceptor. Com o Postman, criei requisições e testes automatizados para validar o comportamento da API, como status code, mensagens de retorno e dados esperados.
 
@@ -89,4 +89,9 @@ pm.test("Mensagem de sucesso", function () {
             "nome": "Novo Usuário"
             }
           }
+
+#### Cursos na plataforma Alura que estão me auxiliando nos estudos, em teoria e prática:
+- Padrões de API: do HTTP à modelagem de APIs
+- JavaScript: implementando CRUD com requisições HTTP
+
 
